@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Espace Médecin - SIMES</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #005f73;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .images {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .images img {
+      width: 32%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .btn-dossier {
+      display: block;
+      width: 300px;
+      margin: 0 auto 40px;
+      padding: 15px;
+      background-color: #0a9396;
+      color: white;
+      text-align: center;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-dossier:hover {
+      background-color: #007f83;
+    }
+
+    .section {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .section h2 {
+      color: #005f73;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #e0e0e0;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  Bienvenue docteur sur votre espace SIMES
+</header>
+
+<div class="container">
+
+  <div class="images">
+    <img src="medecin hop.pgc.jpg" alt="Hôpital 1">
+    <img src="medecin.pgc.webp" alt="Médecins en travail">
+    <img src="med.pgc.jpg" alt="Hôpital 3">
+  </div>
+
+  <a href="voirdossier/voirdossier.html" class="btn-dossier">Voir le dossier de mes patients</a>
+
+
+  <div class="section">
+    <h2>Conseils médicaux du jour</h2>
+    <p>
+      💡 Un bon médecin commence par une bonne écoute. Prenez toujours quelques secondes de plus pour entendre ce que vos patients ne disent pas.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Espace d’échange entre médecins</h2>
+    <p>🔧 Cette section est en construction. Elle permettra aux médecins de discuter et d’échanger des avis professionnels sur différents cas médicaux.</p>
+  </div>
+
+</div>
+
+<div class="footer">
+  SIMES © 2025 — Tous droits réservés.
+</div>
+
+</body>
+</html>

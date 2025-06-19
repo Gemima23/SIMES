@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Espace Patient SIMES</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 20px 10px;
+      color: #1E88E5;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .image-section {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .image-section img {
+      width: 300px;
+      height: 150px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .btn-dossier {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.btn-dossier:hover {
+  background-color: #388E3C;
+}
+
+    .voir-dossier button:hover {
+      background-color: #388E3C;
+    }
+
+    .infos-sante {
+      margin: 40px auto;
+      width: 80%;
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .infos-sante h3 {
+      color: #1E88E5;
+    }
+
+    .suggestions {
+      margin: 40px auto;
+      width: 80%;
+      text-align: center;
+    }
+
+    .suggestions button {
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .suggestions button:hover {
+      background-color: #388E3C;
+    }
+
+    #resultats {
+      margin-top: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Bienvenue sur l’espace patient de SIMES</header>
+
+  <div class="image-section">
+    <img src="image1.pgc.JPG" alt="Affiche 1">
+    <img src="image2.pgc.jpeg" alt="Affiche 2">
+    <img  src="image3.pgc.jpg" alt="Affiche 3">
+  </div>
+
+  <div class="voir-dossier">
+    <a href="voir le dossier/voir.html"class="btn-dossier"> voir votre dossier</a>
+  </div>
+
+  <div class="infos-sante">
+    <h3>Informations importantes pour votre santé :</h3>
+    <ul>
+      <li><strong>Quand consulter un médecin ?</strong> Dès les premiers signes de fièvre persistante, douleurs inhabituelles ou fatigue extrême.</li>
+      <li><strong>Comment reconnaître les signes d'une maladie chronique ?</strong> Symptômes réguliers comme douleurs, essoufflement, toux, ou perte de poids inexpliquée.</li>
+      <li><strong>Importance de suivre un traitement médical ?</strong> Un bon suivi augmente les chances de guérison et prévient les complications.</li>
+    </ul>
+  </div>
+
+  <div class="suggestions">
+    <h3>Vous ressentez quelque chose ? Cliquez pour voir des suggestions :</h3>
+    <button onclick="afficherMeds('grippe')">Grippe</button>
+    <button onclick="afficherMeds('paludisme')">Paludisme</button>
+    <button onclick="afficherMeds('maux')">Maux de tête</button>
+    <div id="resultats"></div>
+  </div>
+
+  <script>
+    function afficherMeds(maladie) {
+      const medicaments = {
+        grippe: ["Doliprane", "Fervex", "Actifed"],
+        paludisme: ["Coartem", "Lonart", "Quinine"],
+        maux: ["Paracétamol", "Ibuprofène", "Spasfon"]
+      };
+     const resultats= document.getElementById("resultats");
+     if (medicaments[maladie]){
+        const liste=medicaments[maladie]
+        .map(m=> `<li>${m}</li>`)
+        .join('');
+        resultats.innerHTML=`<h4>médicaments conseillé :</h4><ul>${liste}</ul>`;
+     }else{
+        resultats.innerHTML="<p> Aucun médicament disponible.</p>";
+     }
+    }
+
+  </script>
+
+</body>
+</html>

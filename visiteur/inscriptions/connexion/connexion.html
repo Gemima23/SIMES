@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet"href="style.css">
+        <title> connexion</title>
+    </head>
+    <body>
+        <h2> connexion à votre compte</h2>
+    <form id="formconnexion">
+        <label for="email"> Email:</label><br><br>
+        <input type="email"id="email"name="email"required><br><br>
+
+        <label for="motdepasse"> mot de passe:</label>
+        <input type="password"id="motdepasse"name="motdepasse"required><br><br>
+
+        <button type="submit"> se connecter</button>
+    </form>
+    <p id="message"></p>
+    <script>
+        document.getElementById("formconnexion").addEventListener("submit",function(event) {
+            event.preventDefault();
+        
+        let email=document.getElementById("email").value.trim();
+        let motdepasse=document.getElementById("motdepasse").value.trim();
+
+        if(email==""||motdepasse==""){
+            document.getElementById("message").textContent="veuillez remplir tous les champs";
+         }else{
+            document.getElementById("message").textContent="connexion reussie!";
+            window.location.href="choixutilisateur/choix.html"
+         }
+        });
+        
+    </script>
+    </body>
+</html>
